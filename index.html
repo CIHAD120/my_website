@@ -1,115 +1,237 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>روابطي</title>
-    <link rel="stylesheet" href="css/style.css"/>
-</head>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<body>
-
-    <div class="container">
-        <h1>تابعوني على مواقع التواصل</h1>
-
-        
-
-        <div class="social-icons">
-    <a href="https://www.facebook.com/jehad.ahmad.2025/" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.instagram.com/jehadahmad120/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/905343141968" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.youtube.com/@Cyvex1/featured" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="mailto:jehad60007@gamil.com"><i class="fas fa-envelope"></i></a>
-    <a href="https://www.snapchat.com/add/jehadahmad120" ><i class="fab fa-snapchat"></i></a>
-    <a href="https://www.tiktok.com/@cyvex_3" target="_blank"><i class="fab fa-tiktok"></i></a>
-         </div>
-        <style>
-        html, body {
-        margin: 0;
-        height: 100%;
-        overflow: hidden;
-        }
-
-        body {
-        background: linear-gradient(270deg, #00c9ff, #92fe9d, #f7797d, #c471f5);
-        background-size: 800% 800%;
-        animation: animateBg 20s ease infinite;
-        }
-
-        @keyframes animateBg {
-        0% {background-position: 0% 50%;}
-        50% {background-position: 100% 50%;}
-        100% {background-position: 0% 50%;}
-        }
-        </style>
-
-        <footer>
-            &copy; 2025 جميع الحقوق محفوظة لـ Jehad Ahmad
-        </footer>
-    </div>
-    <style>
-        body {
-    background-color: #f9f9f9;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    direction: rtl;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    
-}
-
- .social-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    gap: 30px;
-    margin-top: 30px;
-     display: flex;
-    flex-direction: column; /* يجعل الترتيب عمودي */
-    align-items: center; /* يوسّط الأيقونات أفقياً */
-    gap: 10px; /* مسافة بين الأيقونات */
-    font-size: 40px;
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>تابعوني على مواقع التواصل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root{
+      --bg-start:#2a1951; /* deep violet */
+      --bg-end:#0e0c1b;   /* night */
+      --card:#120f21cc;   /* translucent card */
+      --text:#e9e6ff;
+      --muted:#bdb8e9;
+      --accent1:#7c3aed;
+      --accent2:#2563eb;
+      --accent3:#10b981;
+      --ring1:#ff6a00;
+      --ring2:#ffc400;
+      --ring3:#00ffd5;
+      --shadow: 0 20px 50px rgba(0,0,0,.45);
+      --radius: 22px;
+      --glass-blur: blur(10px);
     }
-.container {
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
-}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      min-height:100%;
+      font-family:'Cairo', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 15% 20%, #3b1b7a55, transparent 70%),
+                  radial-gradient(900px 500px at 85% 30%, #1c225f55, transparent 70%),
+                  linear-gradient(145deg, var(--bg-start), var(--bg-end));
+      background-attachment: fixed;
+    }
+    .wrap{
+      max-width: 1800px; /* Looks great on 4K while staying centered */
+      padding: clamp(20px, 2.5vw, 60px);
+      margin: 0 auto;
+    }
 
-.qr-code img {
-    width: 100px;
-    margin: 20px auto;
-    text-align:right
-}
+    /* Header */
+    .title{
+      font-weight:800;
+      font-size: clamp(28px, 3.8vw, 64px);
+      letter-spacing:.5px;
+      text-align:center;
+      margin: clamp(16px, 2.5vw, 36px) 0 40px;
+      color:#f5d06a;
+      text-shadow: 0 2px 0 #000, 0 18px 50px rgba(0,0,0,.5);
+    }
 
-h1 {
-    margin-top: 20px;
-    font-size: 28px;
-    color: #444;
-}
+    /* Grid */
+    .grid{
+      display:grid;
+      gap: clamp(16px, 1.6vw, 28px);
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    @media (min-width:720px){
+      .grid{grid-template-columns: repeat(2, 1fr)}
+    }
+    @media (min-width:1200px){
+      .grid{grid-template-columns: repeat(3, 1fr)}
+    }
 
-.links a {
-    display: block;
-    background-color: #0088cc;
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    padding: 12px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
+    /* Card */
+    .card{
+      position:relative;
+      isolation:isolate;
+      background: linear-gradient(180deg, #18132b, #0f0c1f);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px clamp(18px, 2vw, 34px);
+      border: 1px solid rgba(255,255,255,.06);
+      overflow:hidden;
+    }
+    .card::before{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(120% 140% at 110% -10%, #7c3aed22, transparent 40%),
+                  radial-gradient(100% 120% at -5% 110%, #10b98122, transparent 45%);
+      filter: var(--glass-blur);
+      z-index:-1;
+    }
+    .card:hover{transform: translateY(-2px)}
+    .card:focus-within{outline: 2px solid #7c3aed66}
 
-.links a:hover {
-    background-color: #005577;
-}
+    .row{display:flex; align-items:center; gap: clamp(16px, 1.6vw, 22px)}
 
-footer {
-    margin-top: 30px;
-    font-size: 14px;
-    color: #000000;
-}
+    /* Icon ring */
+    .ring{
+      --size: clamp(72px, 6.2vw, 110px);
+      width: var(--size); height: var(--size);
+      display:grid; place-items:center;
+      border-radius: 50%;
+      position:relative;
+      background: radial-gradient(circle at 30% 30%, #000 0 35%, #111 60%, #121212 100%);
+    }
+    .ring::before{
+      content:""; position:absolute; inset:-3px; border-radius:50%;
+      background: conic-gradient(
+        from 0deg,
+        #ff5e62, #ff9966, #ffd56b, #3ae374, #17ead9, #7f53ac, #ff5e62
+      );
+      filter: blur(1.2px) saturate(1.1);
+      z-index:-1;
+      animation: spin 6s linear infinite;
+    }
+    .ring i{font-size: clamp(28px, 2.4vw, 40px); color:#fff}
+    @keyframes spin{to{transform: rotate(1turn)}}
 
+    /* Text */
+    .label{
+      font-size: clamp(20px, 1.7vw, 26px);
+      font-weight: 800; margin-bottom: 4px;
+    }
+    .sub{
+      font-size: clamp(14px, 1.1vw, 18px);
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    /* Link as full hit-area */
+    .hit{
+      position:absolute; inset:0; border-radius:inherit;
+    }
+    .card:hover .hit{box-shadow: inset 0 0 0 1px #ffffff18}
+
+    /* Utility badges (optional) */
+    .badge{display:inline-block; font-size:12px; padding:.25rem .55rem; border-radius:999px; background:#ffffff14; margin-inline-start:10px}
+
+    /* Make focus visible for accessibility */
+    a:focus-visible{outline:2px dashed #a78bfa; outline-offset: 4px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1 class="title">تابعوني على مواقع التواصل</h1>
+
+    <section class="grid" aria-label="روابط التواصل الاجتماعي">
+
+      <!-- واتساب -->
+      <article class="card" aria-label="واتساب">
+        <a class="hit" href="https://wa.me/+905343141968" target="_blank" rel="noopener" aria-label="فتح واتساب"></a>
+        <div class="row">
+          <div class="ring" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></div>
+          <div>
+            <div class="label">واتساب</div>
+            <div class="sub">+905343141968</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- إنستغرام -->
+      <article class="card" aria-label="إنستغرام">
+        <a class="hit" href="https://www.instagram.com/jehadahmad120/" target="_blank" rel="noopener" aria-label="فتح إنستغرام"></a>
+        <div class="row">
+          <div class="ring" aria-hidden="true"><i class="fa-brands fa-instagram"></i></div>
+          <div>
+            <div class="label">إنستغرام</div>
+            <div class="sub">instagram.com/JEHAD AHMAD </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- فيسبوك -->
+      <article class="card" aria-label="فيسبوك">
+        <a class="hit" href="https://www.facebook.com/jehad.ahmad.2025/" target="_blank" rel="noopener" aria-label="فتح فيسبوك"></a>
+        <div class="row">
+          <div class="ring" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></div>
+          <div>
+            <div class="label">فيسبوك</div>
+            <div class="sub">facebook.com/JEHAD AHMAD</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- سناب شات -->
+      <article class="card" aria-label="سناب شات">
+        <a class="hit" href="https://www.snapchat.com/@jehadahmad120" target="_blank" rel="noopener" aria-label="فتح سناب شات"></a>
+        <div class="row">
+          <div class="ring" aria-hidden="true"><i class="fa-brands fa-snapchat"></i></div>
+          <div>
+            <div class="label">سناب شات</div>
+            <div class="sub">snapchat.com/add/jehadahmad120</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- البريد الإلكتروني -->
+      <article class="card" aria-label="البريد الإلكتروني">
+        <a class="hit" href="jehad60007@gmail.com" aria-label="إرسال بريد إلكتروني"></a>
+        <div class="row">
+          <div class="ring" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <div class="label">البريد الإلكتروني</div>
+            <div class="sub">you@example.com</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- يوتيوب -->
+      <article class="card" aria-label="يوتيوب">
+        <a class="hit" href="https://www.youtube.com/@Cyvex1/featured" target="_blank" rel="noopener" aria-label="فتح يوتيوب"></a>
+        <div class="row">
+          <div class="ring" aria-hidden="true"><i class="fa-brands fa-youtube"></i></div>
+          <div>
+            <div class="label">يوتيوب</div>
+            <div class="sub">youtube.com/@CYVEX</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- تيك توك -->
+      <article class="card" aria-label="تيك توك">
+        <a class="hit" href="https://www.tiktok.com/@cyvex_3" target="_blank" rel="noopener" aria-label="فتح تيك توك"></a>
+        <div class="row">
+          <div class="ring" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></div>
+          <div>
+            <div class="label">تيك توك</div>
+            <div class="sub">tiktok.com/@cyvex_3</div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <footer style="text-align:center; margin-top:40px; color:#948fc6; font-size:14px">
+       <span>جميع الحقوق محفوظة © <span id="year"></span>CİHAD AHMAD</span>
+    </footer>
+  </main>
 </body>
-    
 </html>
